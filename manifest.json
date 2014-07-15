@@ -1,0 +1,22 @@
+{
+    "name": "youtube_rss",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_title": "Click to get RSS link",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "19": "icons/19x19.png",
+            "38": "icons/38x38.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*.youtube.com/*", "https://*.youtube.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": [
+        "tabs"
+    ]
+}
